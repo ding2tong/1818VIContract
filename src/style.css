@@ -19,12 +19,25 @@ body {
   font-family: var(--font-sans);
   overflow-x: hidden;
   letter-spacing: 0.02em;
-  font-size: 1.125rem;             /* 基礎字體調大 1 級 (~18px) */
+  font-size: 1rem;                  /* 基礎字體 16px */
 }
 
-/* 內容文字再大一級 */
+@media (min-width: 768px) {
+  body {
+    font-size: 1.125rem;            /* 桌機版 ~18px */
+  }
+}
+
+/* 內容文字基礎設定 */
 p, li, td {
-  font-size: 1.25rem;               /* 字體調大 2 級 (~20px) */
+  font-size: 1.1rem;                /* ~17.6px */
+  line-height: 1.7;
+}
+
+@media (min-width: 768px) {
+  p, li, td {
+    font-size: 1.25rem;             /* 桌機版 ~20px */
+  }
 }
 
 .minimal-card {
@@ -40,21 +53,31 @@ p, li, td {
 }
 
 .line-accent span {
-  font-size: 2.25rem; /* 顯著放大序號文字 */
+  font-size: 1.5rem;                /* 手機版較小的序號 */
   font-weight: 900;
   color: var(--color-ink);
-  opacity: 0.2; /* 保持輕盈的背景感，避免喧賓奪主 */
+  opacity: 0.2;
   display: block;
   margin-bottom: 0.5rem;
   letter-spacing: 0.1em;
 }
 
 .line-accent h2 {
-  font-size: 3.5rem; 
+  font-size: 2rem;                  /* 手機版標題 */
   font-weight: 900;
-  line-height: 1.1;
+  line-height: 1.2;
   position: relative;
   z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .line-accent span {
+    font-size: 2.25rem;             /* 桌機版大序號 */
+  }
+  .line-accent h2 {
+    font-size: 3.5rem;              /* 桌機版大標題 */
+    line-height: 1.1;
+  }
 }
 
 .line-accent::after {

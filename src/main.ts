@@ -53,7 +53,7 @@ const contractData: Clause[] = [
         id: "第四條",
         title: "終止或暫停",
         content: `
-            <div class="space-y-12">
+            <div class="space-y-8 md:space-y-12">
                 <div>
                     <h3 class="text-[10px] font-black uppercase tracking-[0.2em] text-gray-300 mb-6">甲方提出終止（非因乙方違約）</h3>
                     <div class="table-container">
@@ -93,7 +93,7 @@ function initApp() {
     if (!container) return;
 
     container.innerHTML = contractData.map(c => `
-        <section class="section-reveal space-y-10">
+        <section class="section-reveal space-y-6 md:space-y-10">
             <div class="line-accent">
                 <span class="text-[10px] text-gray-300 font-bold tracking-widest block mb-2 uppercase">${c.id}</span>
                 <h2 class="text-2xl font-bold tracking-tight text-ink">${c.title}</h2>
