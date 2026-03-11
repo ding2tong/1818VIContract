@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>設計委託合約書 | 1818 工作室</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  </head>
+  <body class="selection:bg-ink selection:text-white">
+    <div id="app">
+      <!-- 滾動進度 -->
+      <div class="fixed top-0 left-0 w-full h-[3px] bg-border-line z-50">
+        <div id="progress-bar" class="h-full bg-ink transition-all duration-300" style="width: 0%"></div>
+      </div>
+
+      <!-- Header -->
+      <header class="pt-32 pb-20 px-4 border-b border-border-line bg-white">
+        <div class="container mx-auto max-w-4xl">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+            <div class="space-y-4">
+              <span class="text-[12px] tracking-[0.35em] uppercase text-gray-400 font-bold">Design Contract / 2024</span>
+              <h1 class="text-4xl md:text-5xl font-black tracking-tighter text-ink mb-1">
+                設計委託<span class="font-normal italic">合約書</span>
+              </h1>
+              <p class="text-gray-600 font-light text-xl">
+                乙八乙八工作室 × <span class="text-ink font-bold">{{甲方公司名稱}}</span>
+              </p>
+            </div>
+            <div class="hidden md:block text-right">
+              <p class="text-xs text-gray-400 font-mono">DOCUMENT NO. 1818-DC-001</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container mx-auto px-4 py-24 max-w-4xl">
+        <!-- 摘要區 -->
+        <section class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-32 section-reveal">
+          <div class="minimal-card p-8 rounded-sm">
+            <span class="text-xs text-gray-500 mb-3 block font-bold tracking-wider">專案天數</span>
+            <div class="text-3xl font-black">45 <span class="text-sm font-normal">日</span></div>
+          </div>
+          <div class="minimal-card p-8 rounded-sm">
+            <span class="text-xs text-gray-500 mb-3 block font-bold tracking-wider">提案數量</span>
+            <div class="text-3xl font-black">5 <span class="text-sm font-normal">款</span></div>
+          </div>
+          <div class="minimal-card p-8 rounded-sm">
+            <span class="text-xs text-gray-500 mb-3 block font-bold tracking-wider">修訂次數</span>
+            <div class="text-3xl font-black">3 <span class="text-sm font-normal">次</span></div>
+          </div>
+          <!-- 修正付款比例樣式，改為白底黑字與其他一致 -->
+          <div class="minimal-card p-8 rounded-sm">
+            <span class="text-xs text-gray-500 mb-3 block font-bold tracking-wider">付款比例</span>
+            <div class="text-3xl font-black">50 : 50</div>
+          </div>
+        </section>
+
+        <!-- 條款內容 -->
+        <div id="contract-content" class="space-y-40"></div>
+
+        <!-- 簽署區 -->
+        <section class="section-reveal pt-32 mt-32 border-t-2 border-ink">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-24">
+                <div class="space-y-16">
+                    <h4 class="text-sm font-black tracking-[0.2em] text-ink uppercase">Party A / 甲方</h4>
+                    <div class="h-[1.5px] bg-ink w-full"></div>
+                    <p class="text-xs text-gray-500 italic">Authorized Signature / Representative</p>
+                </div>
+                <div class="space-y-16">
+                    <h4 class="text-sm font-black tracking-[0.2em] text-ink uppercase">Party B / 乙方</h4>
+                    <div class="h-[1.5px] bg-ink w-full"></div>
+                    <p class="text-xs text-gray-500 italic">Authorized Signature / Representative</p>
+                </div>
+            </div>
+            <div class="mt-24 text-center">
+                <p class="text-xs text-gray-400 font-mono tracking-[0.2em]">EXECUTED ON THIS DAY OF MARCH, 2026</p>
+            </div>
+        </section>
+      </main>
+
+      <footer class="py-24 bg-gray-50 border-t border-border-line">
+          <div class="container mx-auto px-4 max-w-4xl text-center">
+               <p class="text-xs text-gray-500 tracking-[0.4em] uppercase font-medium">1818 Studio Design Commitment</p>
+          </div>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
